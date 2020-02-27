@@ -1,0 +1,33 @@
+@import "design/import";
+
+#to_top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: .20;
+  z-index: 1;
+  border: 1px solid rgba(white, .5);
+
+  a {
+    //color: lighten($primary, 10%);
+  }
+
+  .btn {
+    width: 39px;
+    height: 39px;
+  }
+
+  :hover {
+    opacity: 1;
+  }
+
+  @include media-breakpoint-only(lg) {
+    right: 20px;
+  }
+  @include media-breakpoint-only(md) {
+    right: 20px;
+  }
+  @include media-breakpoint-only(xl) {
+    right: 20px;
+  }
+}

@@ -1,0 +1,32 @@
+{% load sekizai_tags %}
+
+<div id="to_top" class="" style="display: none;">
+    <div class="btn btn-outline-to-top btn-sm p-2 up_btn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</div>
+
+
+{% addtoblock "css" %}
+    <link href="/static/to_top.scss" rel="stylesheet" type="text/x-scss">
+{% endaddtoblock %}
+
+
+{% addtoblock 'js' %}
+    <script>
+        $(function () {
+            if ($(window).width() > 763) {
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > 50) {
+                        $('#to_top').fadeIn(1000);
+                    } else {
+                        $('#to_top').fadeOut(1000);
+                    }
+                });
+                $('#to_top').click(function () {
+                    $('html,body').animate({scrollTop: 0}, 500);//переходим вверх
+                })
+            }
+        });
+    </script>
+{% endaddtoblock %}

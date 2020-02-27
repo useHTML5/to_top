@@ -16,6 +16,8 @@ INSTALLED_APPS = {
 
 Needs jquery sekizai css and js blocks in code.
 
+@import "design/import";
+
 usage
 _____
 
